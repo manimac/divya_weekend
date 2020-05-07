@@ -1,2 +1,25 @@
 <p>landing-page works!</p>
-<div *ngIf="test">tevdh</div>
+<div>{{username}}</div>
+<div [innerHtml]="username"></div>
+<div>{{user.name}}</div>
+<div>{{user.age}}</div>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td [hidden]="emp.age!=29">{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="showDiv">
+   Using ng if condition Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maxime accusamus quos quam sed, eos, enim ex aliquid beatae expedita harum culpa dolores adipisci, non nulla numquam voluptate. Necessitatibus, harum?
+</div>
+<div [hidden]="showDiv">
+    Using hidden condition Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maxime accusamus quos quam sed, eos, enim ex aliquid beatae expedita harum culpa dolores adipisci, non nulla numquam voluptate. Necessitatibus, harum?
+ </div>
