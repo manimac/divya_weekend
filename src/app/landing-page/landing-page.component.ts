@@ -28,10 +28,21 @@ export class LandingPageComponent {
     }
   ]
 
-  showDiv = true;
+  showDiv = false;
+
+  showClass = false;
+
+  styleProp = {
+    background: 'blue',
+    fontSize: '28px'
+  }
   
   constructor() { 
     this.username = 'Aravind';
+    let self = this;
+    setTimeout(function(){
+      self.styleProp.background = 'brown';
+    },1000)
   }
 
   ngOnInit(): void {

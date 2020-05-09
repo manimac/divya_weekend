@@ -1,9 +1,15 @@
+<style>
+    .active{
+        background: red;
+    }
+</style>
+<training-header></training-header>
 <p>landing-page works!</p>
 <div>{{username}}</div>
 <div [innerHtml]="username"></div>
 <div>{{user.name}}</div>
 <div>{{user.age}}</div>
-
+<router-outlet></router-outlet>
 <table>
     <thead>
         <th>Name</th>
@@ -23,3 +29,12 @@
 <div [hidden]="showDiv">
     Using hidden condition Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maxime accusamus quos quam sed, eos, enim ex aliquid beatae expedita harum culpa dolores adipisci, non nulla numquam voluptate. Necessitatibus, harum?
  </div>
+
+ <div [ngClass]="{'active':showClass}">
+     Using ng Class Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eligendi necessitatibus quibusdam assumenda optio ipsum consequatur asperiores labore laboriosam debitis at, nisi sapiente iste expedita, eos facere eum porro! Eos?
+ </div>
+ <div [ngStyle]="styleProp">
+     Using ng style Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque et deserunt aspernatur illo officiis sed molestiae voluptas numquam perferendis debitis inventore corporis, sit minima minus necessitatibus laborum omnis quas!
+ </div>
+
+ 
