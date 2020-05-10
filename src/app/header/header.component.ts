@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'training-header',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) {
+    console.log(this.router.url);
+    // let self = this;
+    // setTimeout(function(){
+    //   console.log(self.router.url);
+    // },1000)
+  }
 
   ngOnInit(): void {
   }

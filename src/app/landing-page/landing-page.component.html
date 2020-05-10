@@ -3,14 +3,16 @@
         background: red;
     }
 </style>
-<training-header></training-header>
-<p>landing-page works!</p>
+
+<!-- <p>landing-page works!</p>
 <div>{{username}}</div>
 <div [innerHtml]="username"></div>
 <div>{{user.name}}</div>
-<div>{{user.age}}</div>
+<div>{{user.age}}</div> -->
+
+<training-header *ngIf="isLoggedIn"></training-header>
 <router-outlet></router-outlet>
-<table>
+<!-- <table>
     <thead>
         <th>Name</th>
         <th>Age</th>
@@ -35,6 +37,6 @@
  </div>
  <div [ngStyle]="styleProp">
      Using ng style Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque et deserunt aspernatur illo officiis sed molestiae voluptas numquam perferendis debitis inventore corporis, sit minima minus necessitatibus laborum omnis quas!
- </div>
+ </div> -->
 
  

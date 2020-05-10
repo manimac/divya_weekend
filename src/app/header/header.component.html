@@ -1,1 +1,11 @@
-<p>header component!</p>
+<style>
+    .active{
+        background: royalblue;
+    }
+</style>
+<ul>
+    <li><a routerLink="/home" [ngClass]="{'active':router.url=='/home'}">Home</a></li>
+    <li><a routerLink="/about" [ngClass]="{'active':router.url=='/about'}">About</a></li>
+    <li><a routerLink="/events" [ngClass]="{'active':router.url=='/events'}">Events</a></li>
+    <li><a routerLink="/forms" [ngClass]="{'active':router.url=='/forms'}">Forms</a></li>
+</ul>

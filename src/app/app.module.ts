@@ -9,6 +9,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AboutChildComponent } from './about-child/about-child.component';
 import { HeaderComponent } from './header/header.component';
+import { EventsComponent } from './events/events.component';
+import { FormsComponent } from './forms/forms.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     AboutComponent,
     AboutChildComponent,
-    HeaderComponent
+    HeaderComponent,
+    EventsComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [LandingPageComponent]

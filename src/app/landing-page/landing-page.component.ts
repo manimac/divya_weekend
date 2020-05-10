@@ -36,6 +36,8 @@ export class LandingPageComponent {
     background: 'blue',
     fontSize: '28px'
   }
+
+  isLoggedIn = true;
   
   constructor() { 
     this.username = 'Aravind';

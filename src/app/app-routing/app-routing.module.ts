@@ -4,15 +4,17 @@ import { Routes, RouterModule} from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
 import { AboutChildComponent } from '../about-child/about-child.component';
+import { EventsComponent } from '../events/events.component';
+import { FormsComponent } from '../forms/forms.component';
 
 
 const route: Routes = [
   {
     path: '', redirectTo: 'home', pathMatch:'full' // page will redirect if url is localhost:4200
   },
-  {
-    path:'**', redirectTo: 'home' // If user enter the wrong url
-  },
+  // {
+  //   path:'**', redirectTo: 'home' // If user enter the wrong url
+  // },
   // {
   //   path:'**', component: pageNotFoundComponent
   // },
@@ -32,6 +34,12 @@ const route: Routes = [
       //   path: 'child', component: AboutChildComponent
       // }
     ]
+  },
+  {
+    path: 'events', component: EventsComponent
+  },
+  {
+    path: 'forms', component: FormsComponent
   }
 ]
 

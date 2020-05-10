@@ -1,0 +1,25 @@
+<p>forms works!</p>
+<input type="text" #username>
+<button (click)="SaveLocalReference(username.value)">Save Using Local Reference</button>
+
+<input type="text" [(ngModel)]="staffName">
+<button (click)="SaveNgModel()">Save using ng model</button>
+<button (click)="resetNgModel()">Clear</button>
+
+
+<form #employeeForm="ngForm">
+    <input type="text" ngModel name="username">
+    <input type="text" ngModel name="useremail">
+    <input type="text" ngModel name="usermobile">
+    <button (click)="SaveTemplateDriven(employeeForm.form.value)">Save using template driven</button>
+    <button (click)="resetTemplate(employeeForm.form)">Clear</button>
+</form>
+
+<form [formGroup]="studentsForm">
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="email">
+    <input type="text" formControlName="mobile">
+    <button (click)="SaveReactiveForm()">Save using reactive approach</button>
+    <button (click)="clear()">Reset</button>
+</form>
+<!-- <training-about></training-about> -->
