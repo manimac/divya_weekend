@@ -6,6 +6,7 @@ import { AboutComponent } from '../about/about.component';
 import { AboutChildComponent } from '../about-child/about-child.component';
 import { EventsComponent } from '../events/events.component';
 import { FormsComponent } from '../forms/forms.component';
+import { ParentComponent } from '../parent/parent.component';
 
 
 const route: Routes = [
@@ -40,6 +41,9 @@ const route: Routes = [
   },
   {
     path: 'forms', component: FormsComponent
+  },
+  {
+    path: 'parent-child', component: ParentComponent
   }
 ]
 
