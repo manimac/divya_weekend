@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CommunicationService } from '../communication.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class ChildComponent implements OnInit {
   @Input() user;
   @Output('parentFun') parent: EventEmitter<any>= new EventEmitter();
 
-  constructor() { }
+  constructor(private communication: CommunicationService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,9 @@ export class ChildComponent implements OnInit {
   }
 
   childName = 'Vicky';
+
+  childToCommon(){
+    this.communication.childToCommon.emit('Child component');
+  }
 
 }

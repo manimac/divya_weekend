@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { CommunicationService } from '../communication.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -39,12 +40,15 @@ export class LandingPageComponent {
 
   isLoggedIn = true;
   
-  constructor() { 
+  constructor(private communication: CommunicationService) { 
     this.username = 'Aravind';
     let self = this;
     setTimeout(function(){
       self.styleProp.background = 'brown';
     },1000)
+    this.communication.homeToLandingPage.subscribe((response)=>{
+      this.callfromHome();
+    })
   }
 
   ngOnInit(): void {
@@ -53,6 +57,10 @@ export class LandingPageComponent {
 
   ngAfterViewInit(){
     //After loading the html content
+  }
+
+  callfromHome(){
+    alert("Component called from Home");
   }
 
 }

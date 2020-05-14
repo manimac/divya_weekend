@@ -15,6 +15,7 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { CommonComponent } from './common/common.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ChildComponent } from './child/child.component';
     EventsComponent,
     FormsComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CommonComponent
   ],
   imports: [
     BrowserModule,
