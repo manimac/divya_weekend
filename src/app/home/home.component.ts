@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from '../communication.service';
+import { CustomService } from '../services/custom.service';
 
 @Component({
   selector: 'training-home',
@@ -8,7 +9,13 @@ import { CommunicationService } from '../communication.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private communication: CommunicationService) { }
+  serviceText;
+  price1 = 100;
+  price2 = 200;
+  price3 = 300;
+  constructor(private communication: CommunicationService, private custom: CustomService) { 
+    this.serviceText = this.custom.getValue();
+  }
 
   ngOnInit(): void {
   }

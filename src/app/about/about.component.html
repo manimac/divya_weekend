@@ -1,1 +1,15 @@
 <h1>About page</h1>
+{{pageTitle|toUpper}}
+<input type="text" [(ngModel)]="search">    
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stu of students|inputFilter:search">
+            <td>{{stu.name}}</td>
+            <td>{{stu.age}}</td>
+        </tr>
+    </tbody>
+</table>

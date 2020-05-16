@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { CommonComponent } from './common/common.component';
+import { ConvertToDollarPipe, ToUpperPipe } from './pipes/convert-to-dollar.pipe';
+import { InputFilterPipe } from './pipes/input-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,10 @@ import { CommonComponent } from './common/common.component';
     FormsComponent,
     ParentComponent,
     ChildComponent,
-    CommonComponent
+    CommonComponent,
+    ConvertToDollarPipe,
+    ToUpperPipe,
+    InputFilterPipe
   ],
   imports: [
     BrowserModule,
