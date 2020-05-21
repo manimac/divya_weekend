@@ -1,0 +1,14 @@
+<p>api works!</p>
+<div style="color: red;">{{error}}</div>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let com of comments">
+            <td>{{com.name}}</td>
+            <td>{{com.email}}</td>
+        </tr>
+    </tbody>
+</table>

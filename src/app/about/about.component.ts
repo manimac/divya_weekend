@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   pageTitle = 'About component';
+  search;
   students = [
     {
       name: 'Aravind',

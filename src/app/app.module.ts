@@ -18,6 +18,8 @@ import { ChildComponent } from './child/child.component';
 import { CommonComponent } from './common/common.component';
 import { ConvertToDollarPipe, ToUpperPipe } from './pipes/convert-to-dollar.pipe';
 import { InputFilterPipe } from './pipes/input-filter.pipe';
+import { ApiComponent } from './api/api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,14 +36,16 @@ import { InputFilterPipe } from './pipes/input-filter.pipe';
     CommonComponent,
     ConvertToDollarPipe,
     ToUpperPipe,
-    InputFilterPipe
+    InputFilterPipe,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [LandingPageComponent]
