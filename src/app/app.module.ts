@@ -20,6 +20,7 @@ import { ConvertToDollarPipe, ToUpperPipe } from './pipes/convert-to-dollar.pipe
 import { InputFilterPipe } from './pipes/input-filter.pipe';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomDirective } from './directives/custom.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     ConvertToDollarPipe,
     ToUpperPipe,
     InputFilterPipe,
-    ApiComponent
+    ApiComponent,
+    CustomDirective
   ],
   imports: [
     BrowserModule,
