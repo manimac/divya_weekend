@@ -3,3 +3,6 @@
 <div>{{price2|convertToDollar}}</div>
 <span trainingCustom>{{price3|convertToDollar}}</span>
 <button (click)="callToLandingPage()">Click to landing page</button>
+<div *ngFor="let image of imagePath">
+    <img src="{{image}}">
+</div>

@@ -21,6 +21,7 @@ import { InputFilterPipe } from './pipes/input-filter.pipe';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomDirective } from './directives/custom.directive';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CustomDirective } from './directives/custom.directive';
     ToUpperPipe,
     InputFilterPipe,
     ApiComponent,
-    CustomDirective
+    CustomDirective,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

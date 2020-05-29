@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   price1 = 100;
   price2 = 200;
   price3 = 300;
+  imagePath = ['assets/logo.png','assets/logo1.png'];
   constructor(private communication: CommunicationService, private custom: CustomService) { 
     this.serviceText = this.custom.getValue();
   }

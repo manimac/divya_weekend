@@ -8,6 +8,7 @@ import { EventsComponent } from '../events/events.component';
 import { FormsComponent } from '../forms/forms.component';
 import { ParentComponent } from '../parent/parent.component';
 import { ApiComponent } from '../api/api.component';
+import { CrudComponent } from '../crud/crud.component';
 
 
 const route: Routes = [
@@ -48,6 +49,9 @@ const route: Routes = [
   },
   {
     path: 'api', component: ApiComponent
+  },
+  {
+    path: 'crud', component: CrudComponent
   }
 ]
 

@@ -1,0 +1,33 @@
+<form [formGroup]="studentsForm">
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <label>Mobile</label>
+    <input type="number" formControlName="mobile">
+    <label>City</label>
+    <input type="text" formControlName="city">
+    <button (click)="save()">Save</button>
+</form>
+
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let students of studentsList;let i = index">
+            <td>{{students.name}}</td>
+            <td>{{students.email}}</td>
+            <td>{{students.mobile}}</td>
+            <td>{{students.city}}</td>
+            <td><button (click)="edit(students, i)">Edit</button></td>
+            <td><button (click)="delete(i)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
