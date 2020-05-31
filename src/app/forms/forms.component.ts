@@ -14,9 +14,11 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentsForm = new FormGroup({
-      name: new FormControl('test', [Validators.required]),
-      email: new FormControl('', [Validators.minLength(6)]),
-      mobile: new FormControl('')
+      users: new FormGroup({
+        name: new FormControl('test', [Validators.required]),
+        email: new FormControl('', [Validators.minLength(6)]),
+        mobile: new FormControl('')
+      })      
     })
   }
 

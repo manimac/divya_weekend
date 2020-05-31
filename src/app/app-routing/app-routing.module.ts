@@ -9,7 +9,7 @@ import { FormsComponent } from '../forms/forms.component';
 import { ParentComponent } from '../parent/parent.component';
 import { ApiComponent } from '../api/api.component';
 import { CrudComponent } from '../crud/crud.component';
-
+import { AuthGuardService } from '../services/auth-guard.service';
 
 const route: Routes = [
   {
@@ -42,16 +42,16 @@ const route: Routes = [
     path: 'events', component: EventsComponent
   },
   {
-    path: 'forms', component: FormsComponent
+    path: 'forms', component: FormsComponent, canActivate: [AuthGuardService]
   },
   {
     path: 'parent-child', component: ParentComponent
   },
   {
-    path: 'api', component: ApiComponent
+    path: 'api', component: ApiComponent, canActivate: [AuthGuardService]
   },
   {
-    path: 'crud', component: CrudComponent
+    path: 'crud', component: CrudComponent, canActivate: [AuthGuardService]
   }
 ]
 

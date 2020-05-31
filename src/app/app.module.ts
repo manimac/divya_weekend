@@ -22,7 +22,8 @@ import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomDirective } from './directives/custom.directive';
 import { CrudComponent } from './crud/crud.component';
-
+import { SettingsComponent } from './accountModule/settings/settings.component';
+import { AccountModuleModule } from './account-module/account-module.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { CrudComponent } from './crud/crud.component';
     InputFilterPipe,
     ApiComponent,
     CustomDirective,
-    CrudComponent
+    CrudComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +51,11 @@ import { CrudComponent } from './crud/crud.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AccountModuleModule
   ],
   providers: [],
-  bootstrap: [LandingPageComponent]
+  bootstrap: [LandingPageComponent],
+  exports: [AboutComponent]
 })
 export class AppModule { }

@@ -16,9 +16,11 @@
 </form>
 
 <form [formGroup]="studentsForm">
+    <div formGroupName="users">
     <input type="text" formControlName="name">
     <input type="text" formControlName="email">
     <input type="text" formControlName="mobile">
+</div>
     <button (click)="SaveReactiveForm()">Save using reactive approach</button>
     <button (click)="clear()">Reset</button>
 </form>
